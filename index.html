@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My To-Do List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page-bg">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <main class="container">
+
+    <header class="app-header">
+      <div class="header-icon">✦</div>
+      <h1 class="app-title">My To‑Do List</h1>
+      <p class="app-subtitle">Stay focused, one task at a time.</p>
+    </header>
+
+    <section class="input-section">
+      <div class="input-wrapper">
+        <input
+          type="text"
+          id="taskInput"
+          class="task-input"
+          placeholder="What needs to be done?"
+          maxlength="120"
+          autocomplete="off"
+        />
+        <button id="addBtn" class="add-btn" aria-label="Add Task">
+          <span class="btn-icon">+</span>
+          <span class="btn-label">Add Task</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="stats-bar" id="statsBar">
+      <span id="statsText" class="stats-text">No tasks yet</span>
+      <button id="clearDoneBtn" class="clear-btn" style="display:none;">Clear completed</button>
+    </section>
+
+    <ul class="task-list" id="taskList">
+      <!-- Tasks are injected here by script.js -->
+    </ul>
+
+    <p class="empty-state" id="emptyState">
+      <span class="empty-icon">🌿</span><br/>
+      Your list is clear — enjoy the calm!
+    </p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
